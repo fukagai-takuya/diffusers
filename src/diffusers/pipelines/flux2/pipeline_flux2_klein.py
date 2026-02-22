@@ -513,6 +513,9 @@ class Flux2KleinPipeline(DiffusionPipeline, Flux2LoraLoaderMixin):
         device,
         dtype,
     ):
+
+        import ipdb; ipdb.set_trace()
+        
         image_latents = []
         for image in images:
             image = image.to(device=device, dtype=dtype)
