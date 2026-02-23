@@ -870,6 +870,9 @@ class Flux2KleinPipeline(DiffusionPipeline, Flux2LoraLoaderMixin):
 
                 # compute the previous noisy sample x_t -> x_t-1
                 latents_dtype = latents.dtype
+                
+                import ipdb; ipdb.set_trace()
+                
                 latents = self.scheduler.step(noise_pred, t, latents, return_dict=False)[0]
 
                 if latents.dtype != latents_dtype:
