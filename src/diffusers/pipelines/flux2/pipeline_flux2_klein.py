@@ -704,6 +704,8 @@ class Flux2KleinPipeline(DiffusionPipeline, Flux2LoraLoaderMixin):
             generated images.
         """
 
+        import ipdb; ipdb.set_trace()
+        
         # 1. Check inputs. Raise error if not correct
         self.check_inputs(
             prompt=prompt,
