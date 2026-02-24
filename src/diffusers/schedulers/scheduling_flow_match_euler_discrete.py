@@ -378,6 +378,9 @@ class FlowMatchEulerDiscreteScheduler(SchedulerMixin, ConfigMixin):
         else:
             sigmas = torch.cat([sigmas, torch.zeros(1, device=sigmas.device)])
 
+        print(sigmas)
+        print(timesteps)
+
         self.timesteps = timesteps
         self.sigmas = sigmas
         self._step_index = None
