@@ -738,7 +738,9 @@ class Flux2KleinPipeline(DiffusionPipeline, Flux2LoraLoaderMixin):
             max_sequence_length=max_sequence_length,
             text_encoder_out_layers=text_encoder_out_layers,
         )
-
+        
+        import ipdb; ipdb.set_trace()
+        
         if self.do_classifier_free_guidance:
             negative_prompt = ""
             if prompt is not None and isinstance(prompt, list):
