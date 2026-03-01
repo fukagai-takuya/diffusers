@@ -816,6 +816,10 @@ class Flux2Transformer2DModel(
             If `return_dict` is True, an [`~models.transformer_2d.Transformer2DModelOutput`] is returned, otherwise a
             `tuple` where the first element is the sample tensor.
         """
+        
+        import ipdb; ipdb.set_trace()
+        
+
         # 0. Handle input arguments
 
         num_txt_tokens = encoder_hidden_states.shape[1]
