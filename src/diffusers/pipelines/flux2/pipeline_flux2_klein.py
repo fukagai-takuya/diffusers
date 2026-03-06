@@ -222,6 +222,8 @@ class Flux2KleinPipeline(DiffusionPipeline, Flux2LoraLoaderMixin):
         all_input_ids = []
         all_attention_masks = []
 
+        import ipdb; ipdb.set_trace()
+        
         for single_prompt in prompt:
             messages = [{"role": "user", "content": single_prompt}]
             text = tokenizer.apply_chat_template(
